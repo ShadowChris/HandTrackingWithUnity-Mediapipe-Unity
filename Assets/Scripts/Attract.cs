@@ -6,42 +6,47 @@ public class Attract : MonoBehaviour
 {
     public GameObject hand;
     public float attractDistance = 0.3f;
-    public float force = 500f;
+    public bool isAttachedToHand = false;
 
     private Rigidbody rb;
-    private bool isAttracted;
+    private CapsuleCollider Collider;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        Collider = hand.GetComponent<CapsuleCollider>();
     }
 
-    void FixedUpdate()
+    void Update()
     {
+
         Vector3 handPos = hand.transform.position;
         Vector3 currPos = this.transform.position;
         Vector3 distance = handPos - currPos;
 
         print("distance: " + distance.magnitude);
-        if (distance.magnitude < attractDistance)
-        {   
-            // 吸引之后关掉重力
-            if (!isAttracted)
-            {
-                isAttracted = true;
-                rb.useGravity = false;
-                rb.interpolation = RigidbodyInterpolation.Interpolate;
-            }
-            rb.AddForce(distance * force);
-        }
-        else
+
+
+        if (isAttachedToHand && distance.magnitude < attractDistance)
         {
-            if (isAttracted)
-            {
-                isAttracted = false;
-                rb.useGravity = true;
-                rb.interpolation = RigidbodyInterpolation.None;
-            }
+            AttachToHand();
+        } else
+        {
+            DetachFromHand();
         }
+
     }
+
+    void AttachToHand()
+    {
+        rb.useGravity = false;
+        this.transform.position = hand.transform.position;
+    }
+
+    void DetachFromHand()
+    {
+        rb.useGravity = true;
+    }
+    
+    //Collider
 }
