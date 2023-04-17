@@ -2245,8 +2245,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   handTransform: {fileID: 520741885}
   cameraTransform: {fileID: 963194228}
+  characterTransform: {fileID: 1342155124}
   moveSpeed: 1
   boundaryThreshold: 0.8
+  horizontalBoundary: {x: -0.1, y: 0.1}
+  verticalBoundary: {x: -0.1, y: 0.1}
+  isEnabled: 1
 --- !u!114 &703441894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2881,9 +2885,9 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.32
+  near clip plane: 0.01
   far clip plane: 1000
-  field of view: 70
+  field of view: 60
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -2909,7 +2913,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.08062379, y: 0, z: 0, w: 0.99674463}
-  m_LocalPosition: {x: 0, y: 1.334, z: -0.206}
+  m_LocalPosition: {x: 0, y: 1.334, z: -0.042}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
