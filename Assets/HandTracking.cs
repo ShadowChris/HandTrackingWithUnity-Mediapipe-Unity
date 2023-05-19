@@ -41,28 +41,28 @@ namespace landmarktest
         // Update is called once per frame
         void Update()
         {
-            string data = udpReceive.data;
-            data = data.Remove(0, 1);
-            data = data.Remove(data.Length - 1, 1);
-            string data1 = data;
-            string[] p = data.Split(',');
-            print("@@@@" + p.Length);
-
-
             //string data = udpReceive.data;
-            ////print("data: " + data);
             //data = data.Remove(0, 1);
-            //string[] pointsAndClass = data.Split(']');
-            //gestureLabel = pointsAndClass[1];
-            //data = pointsAndClass[0];
-            //string[] pointsRight = data.Split(',');
+            //data = data.Remove(data.Length - 1, 1);
+            //string data1 = data;
+            //string[] p = data.Split(',');
+            //print("@@@@" + p.Length);
+
+
+            string data = udpReceive.data;
             //print("data: " + data);
-            //print("label: " + gestureLabel);
+            data = data.Remove(0, 1);
+            string[] pointsAndClass = data.Split(']');
+            gestureLabel = pointsAndClass[1];
+            data = pointsAndClass[0];
+            string[] pointsRight = data.Split(',');
+            print("data: " + data);
+            print("label: " + gestureLabel);
 
 
-            string[] points = null;
-            string[] pointsLeft = null;
-            string[] pointsRight = null;
+            //string[] points = null;
+            //string[] pointsLeft = null;
+            //string[] pointsRight = null;
             //if (data.Contains("Left") == true && data.Contains("Right") == true)
             //{
             //    data = data.Remove(data.LastIndexOf("Right") - 3);
@@ -80,12 +80,14 @@ namespace landmarktest
             //    print("OnlyL" + data);
             //}
             //else 
-            if (data.Contains("Left") == false && data.Contains("Right") == true)
-            {
-                data1 = data1.Remove(0, data1.LastIndexOf("Right") + 7);
-                pointsRight = data1.Split(',');
-                print("OnlyR" + pointsRight.Length);
-            }
+
+
+            //if (data.Contains("Left") == false && data.Contains("Right") == true)
+            //{
+            //    data1 = data1.Remove(0, data1.LastIndexOf("Right") + 7);
+            //    pointsRight = data1.Split(',');
+            //    print("OnlyR" + pointsRight.Length);
+            //}
 
             //手部骨骼点坐标映射到unity中（左手）
             //updateLandmarkPosition
