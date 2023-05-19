@@ -19,7 +19,7 @@ namespace landmarktest
         private DepthCalibrator depthCalibrator = new DepthCalibrator(-0.0719f, 0.439f);
         private TransformLink[] transformLinkers;
         public string LinkType = "None";
-        string gestureLabel = null;
+        public string gestureLabel = null;
         int flagR = 0;
         int flagL = 0;
         float Rx0 = 0;
