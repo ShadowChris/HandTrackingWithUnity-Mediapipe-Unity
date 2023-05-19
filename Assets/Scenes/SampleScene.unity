@@ -2615,6 +2615,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rightHand: {fileID: 197199030}
+  currentGesture: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -7678,7 +7679,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6151974592610199831, guid: 3c2e05f3779cd0e46a9ccc71562d2d0f, type: 3}
       propertyPath: m_Text
-      value: Click Me
+      value: Start Game
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c2e05f3779cd0e46a9ccc71562d2d0f, type: 3}
