@@ -15,6 +15,9 @@ public class HandInteraction : MonoBehaviour
     private bool _isCounting = false; // 是否正在计时
     public Image progressCircle; // 在脚本中添加对ProgressCircle的引用
 
+    //手势类别判断
+    public GestureAction gestureAction;
+
     void Update()
     {
         // 获取手指位置信息
@@ -24,7 +27,7 @@ public class HandInteraction : MonoBehaviour
         Vector3 fingerScreenPosition = mainCamera.WorldToScreenPoint(fingerPosition);
 
         // 检查是否满足交互条件
-        if (IsFingerOnButtonLine(fingerScreenPosition, targetButton))
+        if (IsFingerOnButtonLine(fingerScreenPosition, targetButton) && gestureAction.currentGesture.Equals("point"))
         {
             // 如果满足条件，开始计时
             _isCounting = true;

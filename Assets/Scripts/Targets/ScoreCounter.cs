@@ -18,4 +18,14 @@ public class ScoreCounter : MonoBehaviour
             ScoreText.text = score.ToString();
         }
     }
+    
+    public void resetScore()
+    {
+        score = 0;
+    }
+
+    public int getScore()
+    {
+        return score;
+    }
 }

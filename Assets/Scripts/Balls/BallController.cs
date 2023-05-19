@@ -11,6 +11,11 @@ public class BallController : MonoBehaviour
 
     private void Update()
     {
+        resetBall();
+    }
+
+    public void resetBall()
+    {
         if (transform.position.y <= 0.1)
         {
             // 如果小球的z坐标小于或等于0，就将它移回初始位置
