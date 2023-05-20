@@ -2702,11 +2702,12 @@ MonoBehaviour:
   handTransform: {fileID: 520741885}
   cameraTransform: {fileID: 963194228}
   characterTransform: {fileID: 1342155124}
-  moveSpeed: 1
-  boundaryThreshold: 0.8
-  horizontalBoundary: {x: -0.1, y: 0.1}
-  verticalBoundary: {x: -0.1, y: 0.1}
-  isEnabled: 0
+  handTracking: {fileID: 197199032}
+  moveSpeed: 0.5
+  boundaryThreshold: 0
+  horizontalBoundary: {x: -1, y: 1}
+  verticalBoundary: {x: -0.1, y: 1}
+  isEnabled: 1
 --- !u!114 &703441894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2767,7 +2768,7 @@ MonoBehaviour:
   startButton: {fileID: 6151974593823092619}
   timerText: {fileID: 108319089}
   scoreText: {fileID: 806117404}
-  gameDuration: 3
+  gameDuration: 120
   target: {fileID: 1805185163}
   TestCube2: {fileID: 1541073565}
   targetScoreCounter: {fileID: 1805185165}
