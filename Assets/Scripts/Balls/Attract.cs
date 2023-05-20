@@ -10,6 +10,9 @@ public class Attract : MonoBehaviour
 
     private Rigidbody rb;
     private CapsuleCollider Collider;
+    
+    // ball attach state
+    private bool ballIsAttached = false;
 
     void Start()
     {
@@ -41,12 +44,18 @@ public class Attract : MonoBehaviour
     {
         rb.useGravity = false;
         this.transform.position = hand.transform.position;
+        ballIsAttached = true;
     }
 
     void DetachFromHand()
     {
         rb.useGravity = true;
+        ballIsAttached = false;
     }
     
+    public bool getBallAttachState()
+    {
+        return ballIsAttached;
+    }
     //Collider
 }
