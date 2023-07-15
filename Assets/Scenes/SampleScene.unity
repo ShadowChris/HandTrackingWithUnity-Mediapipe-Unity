@@ -2513,7 +2513,7 @@ MonoBehaviour:
   startButton: {fileID: 6151974593823092619}
   timerText: {fileID: 108319089}
   scoreText: {fileID: 806117404}
-  gameDuration: 120
+  gameDuration: 90
   target: {fileID: 1805185163}
   TestCube2: {fileID: 1541073565}
   targetScoreCounter: {fileID: 1805185165}
@@ -2533,7 +2533,7 @@ MonoBehaviour:
   GestureTypeForTestObj: {fileID: 996999831}
   SphereAttract: {fileID: 1953767683}
   SphereBallLauncher: {fileID: 1953767685}
-  isForceAttracted: 1
+  isForceAttracted: 0
   launchBall: 0
   throwLoopTimes: 50
   throwWaitMilliTime: 2

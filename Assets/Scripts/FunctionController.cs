@@ -34,6 +34,17 @@ public class FunctionController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // 如果按下 "j" 键，切换 isForceAttached 的状态
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            isForceAttracted = !isForceAttracted;
+        }
+
+        // 如果按下 "k" 键，触发 launchBall
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            launchBall = true;
+        }
         // 强制开启吸附模式
         if (isForceAttracted)
         {
